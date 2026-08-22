@@ -239,3 +239,84 @@
                 <li><strong>Photoelectric Generation & Power:</strong> The incoming light strikes a microscopic silicon photodetector chip on the card, converting light frequency into electrons via the photoelectric effect. This provides power and serves as an entry entropy seed.</li>
                 <li><strong>Hardware-Level Signal Obfuscation:</strong> The generated electrons power an internal micro-calculator chip running a hardcoded, nonlinear algorithm to deliberately introduce a deterministic miscalculation specific to the incoming light input.</li>
                 <li><strong>Directional Infrared Emission:</strong> This intentionally flawed output value is encoded and transmitted back to the reader via a low-energy, highly directional infrared (IR) LED pulse.</li>
+                <li><strong>Waveform Fusion & Resonance Validation:</strong> The external reader module uses its predefined algorithm to reverse-engineer the error, pairing the input light waveform with the decoded response wave. Access is granted exclusively upon perfect mathematical synchronization and physical resonance.</li>
+            </ul>
+        </section>
+
+        <section id="architecture">
+            <h2>Enterprise-Grade Security Architecture</h2>
+            <ul>
+                <li><strong>Zero Stored Credentials:</strong> Without data-at-rest, the token is entirely immune to memory dumps and database extraction.</li>
+                <li><strong>Absolute Cloning Immunity:</strong> Forgery requires replicating the exact material-based silicon photodetector response, internal chip-burned miscalculation logic, and optical routing.</li>
+                <li><strong>Side-Channel & Replay Resistance:</strong> The absence of a constant power source prevents predictable electromagnetic or thermal signatures.</li>
+                <li><strong>Post-Quantum Resilience:</strong> Relies on real-world analogue physics rather than software-dependent digital encryption.</li>
+                <li><strong>Tamper-Triggered Destruction:</strong> Tokens can be engineered with physical tamper-detection polymer coatings that trigger automatic self-destruct logic if breached.</li>
+            </ul>
+        </section>
+
+        <section id="market">
+            <h2>Market Opportunity & Strategic Use Cases</h2>
+            <ol>
+                <li><strong>National Security & Government Identity:</strong> Next-generation passports, national identity documents, border control, and secure electronic voting terminals.</li>
+                <li><strong>Telecommunications & Critical Infrastructure:</strong> Securing unmanned remote field assets, distributed cellular towers, fiber optic hubs, and regional data centers (e.g., Safaricom nodes).</li>
+                <li><strong>Financial & Banking Operations:</strong> ATM entryways, physical bank vaults, high-value teller logging platforms, and mobile money endpoint terminals.</li>
+                <li><strong>Defence & Aerospace Installations:</strong> Air-gapped military facilities, weapons storage, and aerospace research laboratories enforcing strict line-of-sight verification.</li>
+               <li><strong>Unrivalled Security Advantage:</strong> The world's first unpowered token featuring zero stored credentials, capturing a unique position in the expanding ZTNA market.</li>
+                <li><strong>High Scalability, Low BOM:</strong> Utilizes standard silicon fabrication techniques alongside cost-effective optical components.</li>
+                <li><strong>Universal Compatibility:</strong> Modular design of the external reader allows seamless integration into existing physical access control systems.</li>
+            </ol>
+        </section>
+
+        <section id="simulator" class="simulator-box">
+            <h2>Interactive Concept Sandbox</h2>
+            <p>Select an entry optical wave frequency below to simulate Light Key's hardware-level deterministic calculation loop in real-time.</p>
+            <div class="sim-controls">
+                <label for="wavelength">Select Input Challenge Wavelength:</label>
+                <select id="wavelength">
+                    <option value="635">635 nm (Laser Red)</option>
+                    <option value="532">532 nm (Laser Green)</option>
+                    <option value="445">445 nm (Laser Blue)</option>
+                </select>
+                <button onclick="runSimulation()">Trigger Injection</button>
+            </div>
+            <div class="sim-output" id="outputConsole">> System idle. Awaiting challenge packet...</div>
+        </section>
+
+        <section id="glossary" class="glossary">
+            <h2>Glossary of Terms (Tailored for Simantoi)</h2>
+            <p><strong>RFID/NFC:</strong> Radio Frequency / Near Field Communication. Contactless card technologies used in tap-to-pay systems.</p>
+            <p><strong>PKI:</strong> Public Key Infrastructure. The digital system that manages security certificates and encryption keys.</p>
+            <p><strong>RSA/ECC:</strong> Rivest–Shamir–Adleman / Elliptic-Curve Cryptography. Mathematical formulas used to lock or encrypt digital data.</p>
+            <p><strong>Entropy:</strong> In computing, a source of true randomness used to generate secure keys or unique markers.</p>
+        </section>
+    </div>
+
+    <script>
+        function runSimulation() {
+            const consoleBox = document.getElementById('outputConsole');
+            const wave = document.getElementById('wavelength').value;
+            
+            const generatedHash = (parseInt(wave) * 7).toString(16).toUpperCase();
+            const intentionalError = (parseInt(wave) * 7 + 0xFE).toString(16).toUpperCase();
+            
+            consoleBox.innerHTML = `<span class="pulse-text">> [0ms] Injecting ${wave}nm optical waveform impulse...</span>`;
+            
+            setTimeout(() => {
+                consoleBox.innerHTML += `<br>> [12ms] Photoelectric collection complete. Seed generated: 0x${generatedHash}`;
+            }, 300);
+
+            setTimeout(() => {
+                consoleBox.innerHTML += `<br>> [28ms] Applying hardcoded hardware-level algorithm miscalculation...`;
+            }, 700);
+
+            setTimeout(() => {
+                consoleBox.innerHTML += `<br>> [45ms] Emitting directional IR signature pulse: <strong style="color:#f59e0b">0x${intentionalError}</strong>`;
+            }, 1100);
+
+            setTimeout(() => {
+                consoleBox.innerHTML += `<br><br><span class="success-text">> [60ms] READER VERIFICATION SUCCESSFUL. Resonance synchronized. Access Granted.</span>`;
+            }, 1600);
+        }
+    </script>
+</body>
+</html>
