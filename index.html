@@ -186,6 +186,55 @@
 
         .pulse-text { color: var(--accent-blue); }
         .success-text { color: #10b981; font-weight: bold; }
+                /* ========================================== */
+        /* MOBILE RESPONSIVE MEDIA QUERY             */
+        /* ========================================== */
+        @media screen and (max-width: 768px) {
+            body {
+                display: block; /* Disables side-by-side flex layout */
+            }
+
+            .sidebar {
+                position: relative; /* Removes fixed left pin position */
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #1e293b;
+                padding: 20px;
+            }
+
+            .sidebar h4 {
+                margin-bottom: 10px;
+            }
+
+            .sidebar a {
+                display: inline-block; /* Aligns menu items horizontally */
+                margin-right: 10px;
+                margin-bottom: 5px;
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+
+            .main-container {
+                margin-left: 0; /* Frees up space previously used by sidebar */
+                width: 100%;
+                padding: 25px 20px; /* Reduces heavy padding so text flows naturally */
+            }
+
+            h1 {
+                font-size: 1.6rem; /* Scales title font down for visibility */
+            }
+
+            .sim-controls {
+                flex-direction: column; /* Stacks interactive form inputs vertically */
+                align-items: stretch;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
